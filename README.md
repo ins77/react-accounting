@@ -38,3 +38,4 @@ https://frontender.info/a-guide-to-flexbox/
 https://ru.hexlet.io/blog/posts/how-to-test-code
 https://github.com/ins77/frontend-project-lvl4
 https://www.youtube.com/watch?v=SydnKbGc7W8&t=223s
+Попробовать axios интерсепторы - класс обертка для отлова ошибок

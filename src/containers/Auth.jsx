@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 
-import Popup from '../../components/UI/Popup';
-import SignInForm from '../../components/SignInForm';
-import SignUpForm from '../../components/SignUpForm';
-import * as actions from '../../redux/actions';
-import Button from '../../components/UI/Button/Button';
+import Popup from '../components/UI/Popup';
+import SignInForm from '../components/SignInForm';
+import SignUpForm from '../components/SignUpForm';
+import * as actions from '../redux/actions';
+import Button from '../components/UI/Button/Button';
 
 const actionCreators = {
   auth: actions.auth,
+  createUser: actions.createUser,
 };
 
 class Auth extends Component {
@@ -21,12 +22,13 @@ class Auth extends Component {
     this.setState((state) => ({ isSignUp: !state.isSignUp }));
   }
 
-  handleAuthSubmit = async ({ email, password }) => {
-    const { auth, history } = this.props;
+  handleAuthSubmit = async ({ email, password, name }) => {
+    const { auth, history, createUser } = this.props;
     const { isSignUp } = this.state;
 
     try {
-      await auth({ email, password, isSignUp });
+      const { localId: userId } = await auth({ email, password, isSignUp });
+      await createUser({ email, userId, userName: name });
       history.push('/');
     } catch (error) {
       const { response } = error;

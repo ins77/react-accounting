@@ -27,7 +27,27 @@ const auth = handleActions({
   },
 }, initialState);
 
+const fetchCurrentUserState = handleActions({
+  [actions.fetchCurrentUserRequest]() {
+    return 'requested';
+  },
+  [actions.fetchCurrentUserSuccess]() {
+    return 'finished';
+  },
+  [actions.fetchCurrentUserFailure]() {
+    return 'failed';
+  }
+}, 'none');
+
+const currentUser = handleActions({
+  [actions.fetchCurrentUserSuccess](state, { payload: { user } }) {
+    return Object.values(user)[0];
+  },
+}, null);
+
 export default combineReducers({
   form: formReducer,
   auth,
+  currentUser,
+  fetchCurrentUserState,
 });

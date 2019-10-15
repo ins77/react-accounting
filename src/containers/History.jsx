@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Button from '../../components/UI/Button/Button';
-import * as actions from '../../redux/actions';
+import Button from '../components/UI/Button/Button';
+import * as actions from '../redux/actions';
 
 const actionCreators = {
   authLogout: actions.authLogout,

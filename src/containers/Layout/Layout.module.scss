@@ -1,0 +1,27 @@
+$sidebarWidth: 250px;
+$headerHeight: 70px;
+
+.wrap {
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: $sidebarWidth;
+  height: $headerHeight;
+}
+
+.body {
+  padding-left: $sidebarWidth;
+  padding-top: $headerHeight;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: $sidebarWidth;
+}

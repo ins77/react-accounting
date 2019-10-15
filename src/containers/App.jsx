@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import Auth from '../Auth';
-import History from '../History';
-import * as actions from '../../redux/actions';
+import Auth from './Auth';
+import History from './History';
+import Layout from './Layout';
+import * as actions from '../redux/actions';
 
 const actionCreators = {
   authCheckState: actions.authCheckState,
@@ -31,13 +32,13 @@ class App extends Component {
 
     if (this.props.isAuthenticated) {
       routes = (
-        <Switch>
+        <Layout>
           <Switch>
             <Route path="/history" component={History} />
             <Redirect to="/history" />
             {/* TODO: 404? <Route path="*" component={NotFound} /> */}
           </Switch>
-        </Switch>
+        </Layout>
       );
     }
 
