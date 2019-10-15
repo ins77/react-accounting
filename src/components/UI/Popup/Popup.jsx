@@ -1,13 +1,10 @@
 import React from 'react';
-// import classNames from 'classnames/bind';
-import styles from './Popup.module.scss';
 
-// const cx = classNames.bind(styles);
+import styles from './Popup.module.scss';
 
 const Popup = (props) => {
   return (
-    <>
-      <div className={styles.backdrop}></div>
+    <div className={styles.wrap}>
       <div className={styles.popup}>
         <header className={styles.header}>
           <h3 className={styles.title}>Домашняя бухгалтерия</h3>
@@ -16,7 +13,7 @@ const Popup = (props) => {
           {props.children}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

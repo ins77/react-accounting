@@ -1,3 +1,4 @@
+// TODO: вынести цвета и общие значения в переменные
 @import '~normalize.css/normalize.css';
 
 *,
@@ -19,4 +20,22 @@ body {
   > div {
     height: 100%;
   }
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: #00a383;
+  transition: all .3s;
+
+  &:hover {
+    color: #006a55;
+    text-decoration: none;
+  }
+}
+
+.b-form-row {
+  margin-bottom: 20px;
 }

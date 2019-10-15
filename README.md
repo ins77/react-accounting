@@ -16,23 +16,25 @@ https://redux-actions.js.org/
 https://github.com/css-modules/css-modules
 https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom/docs
 https://reacttraining.com/react-router/web/guides/philosophy
-https://jestjs.io/
-https://airbnb.io/enzyme/
-https://css-tricks.com/writing-tests-for-react-applications-using-jest-and-enzyme/
 https://momentjs.com/docs/
 https://ramdajs.com/docs/
 https://lodash.com/docs/
 https://ru.reactjs.org/docs/strict-mode.html
-https://github.com/reduxjs/reselect
+https://jestjs.io/
+https://airbnb.io/enzyme/
+https://css-tricks.com/writing-tests-for-react-applications-using-jest-and-enzyme/
 
 auth
-proptypes
+prop types
 кеширование
 мемоизация
 декораторы
+lazy loading
+purecomponent
 пагинация и бесконечный список https://www.youtube.com/watch?v=wIOygRAoAdA&t=27s
 автоматы https://www.youtube.com/watch?v=AfsEk4yhjko&t=632s
 typescript https://nauchikus.github.io/typescript-definitive-guide/book/contents/Obshchee-Chto-takoe-i-dlya-chego-nujen-TypeScript
 https://frontender.info/a-guide-to-flexbox/
 https://ru.hexlet.io/blog/posts/how-to-test-code
 https://github.com/ins77/frontend-project-lvl4
+https://www.youtube.com/watch?v=SydnKbGc7W8&t=223s
