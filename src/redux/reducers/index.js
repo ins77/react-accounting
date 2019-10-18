@@ -37,7 +37,7 @@ const fetchCurrentUserState = handleActions({
   [actions.fetchCurrentUserFailure]() {
     return 'failed';
   }
-}, 'none');
+}, 'requested');
 
 const currentUser = handleActions({
   [actions.fetchCurrentUserSuccess](state, { payload: { user } }) {

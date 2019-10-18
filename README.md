@@ -6,7 +6,6 @@ https://github.com/redux-saga/redux-saga
 https://github.com/reduxjs/redux-thunk 
 https://github.com/lynndylanhurley/redux-auth
 https://github.com/joshgeller/react-redux-jwt-auth-example
-https://greybutton.me/workshop-react-testing/
 https://github.com/axios/axios
 https://create-react-app.dev/
 https://github.com/reduxjs/reselect
@@ -20,9 +19,12 @@ https://momentjs.com/docs/
 https://ramdajs.com/docs/
 https://lodash.com/docs/
 https://ru.reactjs.org/docs/strict-mode.html
+
 https://jestjs.io/
 https://airbnb.io/enzyme/
 https://css-tricks.com/writing-tests-for-react-applications-using-jest-and-enzyme/
+https://greybutton.me/workshop-react-testing/
+htmlacademy react testing
 
 auth
 prop types

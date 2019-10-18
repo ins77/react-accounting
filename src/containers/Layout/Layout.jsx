@@ -5,13 +5,18 @@ import Menu from '../../components/Menu/Menu';
 import Header from '../../components/Header/Header';
 import styles from './Layout.module.scss';
 import * as actions from '../../redux/actions';
+import Spinner from '../../components/Spinner/Spinner';
 
 const mapStateToProps = ({ currentUser, auth, fetchCurrentUserState }) => (
-  { currentUser, auth, fetchCurrentUserState }
+  {
+    currentUser,
+    auth,
+    isLoading: fetchCurrentUserState === 'requested',
+  }
 );
 
 const actionCreators = {
-  fetchCurrentUser: actions.fetchCurrentUser
+  fetchCurrentUser: actions.fetchCurrentUser,
 };
 
 class Layout extends Component {
@@ -20,31 +25,20 @@ class Layout extends Component {
   }
 
   render() {
-    const { children, currentUser, fetchCurrentUserState } = this.props;
+    const { children, currentUser, isLoading } = this.props;
 
-    return (
-      <>
-        {
-          fetchCurrentUserState === 'requested' && <div>Идет загрузка, подождите...</div>
-        }
-        {
-          fetchCurrentUserState === 'failed' && <div>Ошибка! TODO: authLogout</div>
-        }
-        {
-          fetchCurrentUserState === 'finished' &&
-            <div className={styles.wrap}>
-              <div className={styles.header}>
-                <Header userName={currentUser.userName} />
-              </div>
-              <div className={styles.menu}>
-                <Menu />
-              </div>
-              <div className={styles.body}>
-                {children}
-              </div>
-            </div>
-        }
-      </>
+    return isLoading ? <Spinner /> : (
+      <div className={styles.wrap}>
+        <div className={styles.header}>
+          <Header userName={currentUser.userName} />
+        </div>
+        <div className={styles.menu}>
+          <Menu />
+        </div>
+        <div className={styles.body}>
+          {children}
+        </div>
+      </div>
     );
   }
 }
